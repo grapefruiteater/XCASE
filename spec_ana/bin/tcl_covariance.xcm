@@ -1,0 +1,18 @@
+@save-all_cross.xcm
+setplot ene 
+ignore bad 
+fit
+
+set i 1
+set num 125
+while {$i <= $num} {
+set j 1
+while {$j <= $num} {
+tclout covariance $i $j
+echo "$xspec_tclout" >> tcl_covariance.txt
+
+incr j
+
+ }
+incr i
+ }
